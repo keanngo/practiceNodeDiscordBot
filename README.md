@@ -8,6 +8,7 @@ to create your own bot with this template:
   4. run "node index" to start the bot
 
 helpful tutorials:
+
   https://anidiots.guide/
   
   https://www.youtube.com/watch?v=-5jJaO17Gjs
