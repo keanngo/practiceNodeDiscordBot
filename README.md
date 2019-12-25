@@ -9,5 +9,7 @@ to create your own bot with this template:
 
 helpful tutorials:
   https://anidiots.guide/
+  
   https://www.youtube.com/watch?v=-5jJaO17Gjs
+  
   https://discord.js.org/#/
