@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/keanngo/practiceNodeDiscordBot#readme",
   "dependencies": {
-    "discord.js": "^11.5.1"
+    "discord.js": "^11.5.1",
+    "enmap": "^5.2.3"
   }
 }
