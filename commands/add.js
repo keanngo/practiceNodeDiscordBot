@@ -2,7 +2,7 @@ const fs = require("fs");
 
 exports.run = (bot, message, args) => {
     console.log(message.author.id);
-    fs.readFile('data.json', 'utf-8', function(err, data){
+    fs.readFile('exp.json', 'utf-8', function(err, data){
         if (err) throw err
         var expTable = JSON.parse(data);
         isInTable = false;
@@ -15,7 +15,7 @@ exports.run = (bot, message, args) => {
         }else{
             message.channel.send("Name is already in the table!");
         }
-        fs.writeFile('data.json', JSON.stringify(expTable), function(err) {
+        fs.writeFile('exp.json', JSON.stringify(expTable), function(err) {
             if(err) {
                 return console.log(err);
             }
