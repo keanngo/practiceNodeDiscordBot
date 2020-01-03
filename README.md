@@ -8,13 +8,22 @@ to create your own bot with this template:
   4. run "node index" to start the bot
 
 useful commands:
-!add : add yourself to the exp pool
-!hunt : gain exp
 
-helpful tutorials:
+!add : add yourself into the hunting grounds!
+
+!list_monster : see what monsters are in your hunting ground
+
+!hunt [name] : attempt to hunt for a monster
+
+!attack [name] : after 'hunt' has been succeeded, you can begin to attack the monster
+
+helpful tutorials and references:
 
   https://anidiots.guide/
   
   https://www.youtube.com/watch?v=-5jJaO17Gjs
   
   https://discord.js.org/#/
+  
+  https://js.evie.dev/
+ 
