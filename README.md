@@ -7,6 +7,10 @@ to create your own bot with this template:
   3. create a config.json at root directory with your bot's token and specified prefix inside
   4. run "node index" to start the bot
 
+useful commands:
+!add : add yourself to the exp pool
+!hunt : gain exp
+
 helpful tutorials:
 
   https://anidiots.guide/
