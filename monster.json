@@ -1,1 +1,1 @@
-{"tiger":{"health":20,"experience":25}}
+{"tiger":{"health":20,"experience":25, "chance":0.5},"dragon":{"health":"500","experience":"300", "chance":0.3},"titan":{"health":"1000","experience":"500", "chance":0.1}}

@@ -1,5 +1,6 @@
 const fs = require("fs");
 
+//'this' is the module itself. Accessible through this.run, not modules.exports.
 exports.run = (bot, message, args) => {
     console.log(message.author.id);
     fs.readFile('exp.json', 'utf-8', function(err, data){
@@ -11,6 +12,7 @@ exports.run = (bot, message, args) => {
             expTable[message.author.id] = {};
             expTable[message.author.id]['experience'] = 0;
             expTable[message.author.id]['level'] = 1;
+            expTable[message.author.id]['damage'] = 10;
             message.channel.send(message.author.id + " has been added to the exp file").catch(console.error);
         }else{
             message.channel.send("Name is already in the table!");

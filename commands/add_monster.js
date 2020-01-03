@@ -9,11 +9,10 @@ exports.run = (bot, message, args) => {
             message.channel.send("Must have atleast 3 arguments (Name, Health, Level)");
             return;
         }
-        console.log(isNan(args[1]));
         if(monsterTable[args[0]] == undefined){
             monsterTable[args[0]] = {};
             monsterTable[args[0]]['health'] = args[1];
-            monsterTable[args[0]]['exp'] = args[2];
+            monsterTable[args[0]]['experience'] = args[2];
             message.channel.send(args[0] + " has been added to the monster file").catch(console.error);
         }else{
             message.channel.send("Monster already inside table");
