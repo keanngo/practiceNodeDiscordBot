@@ -17,6 +17,8 @@ useful commands:
 
 !attack [name] : after 'hunt' has been succeeded, you can begin to attack the monster
 
+!level : level up to deal more damage
+
 helpful tutorials and references:
 
   https://anidiots.guide/
