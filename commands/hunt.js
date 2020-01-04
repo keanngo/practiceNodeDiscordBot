@@ -4,6 +4,7 @@ exports.run = (bot, message, args) => {
     fs.readFile('monsterAtt.json', 'utf-8', function(err, data){
         if(err) throw err;
         var monsterAttTable = JSON.parse(data);
+        if(args.length == 0) return;
         if(monsterAttTable[args[0]] == null){
                 fs.readFile('monster.json', 'utf-8', function(err, info){
                     if(err) throw err;

@@ -6,6 +6,8 @@ fs.readFile('monsterAtt.json', 'utf-8', function(err, data){
     if(err) throw err;
     var monsterAttTable = JSON.parse(data);
 
+    if(args <= 0) return;
+
     if(monsterAttTable[args[0]] == undefined){
         message.channel.send(`${args[0]} is not currently being hunted! Type '!hunt ${args[0]}' for a chance to encounter the monster!`);
         return;
@@ -24,14 +26,14 @@ fs.readFile('monsterAtt.json', 'utf-8', function(err, data){
 
             if(newHealth <= 0 ){
                     prevExp = expTable[message.author.id]['experience'];
-                    expGain = prevExp + monsterAttTable[args[0]]['experience'];
-                    expTable[message.author.id]['experience'] += expGain;
+                    expTable[message.author.id]['experience'] = prevExp + monsterAttTable[args[0]]['experience'];
                     fs.writeFile('exp.json', JSON.stringify(expTable), function(err) {
                         if(err) {
                             return console.log(err);
                         }
                         console.log("The exp file was saved!");
                     message.channel.send(`${args[0]} has been defeated! ${monsterAttTable[args[0]]['experience']} exp has been gained!`);
+                    message.channel.send("You now have " +expTable[message.author.id]['experience']+ " exp! Congratulations!");
                     delete monsterAttTable[args[0]];
         
                     fs.writeFile('monsterAtt.json', JSON.stringify(monsterAttTable), function(err) {
